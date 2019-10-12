@@ -143,7 +143,6 @@ describe('FSM', () => {
 
         it('goes back to prev step after trigger', () => {
             const student = new FSM(config);
-
             student.trigger('study');
             student.undo();
             expect(student.getState()).to.equal('normal');
